@@ -57,7 +57,7 @@ function updateCharacterCount(inputId, counterId, maxLength) {
 
     input.on('input', () => {
         const length = input.val().length;
-        counter.text(`残り${maxLength - length}`);
+        counter.text(`残り${maxLength - length}`); //文字数カウンタの表記を変更
 
         if (length > maxLength) {
             counter.addClass('error');
@@ -114,7 +114,9 @@ function createPost(author, content) {
         author: currentUser.email,
         content: content,
         timestamp: firebase.database.ServerValue.TIMESTAMP,
-        userId: currentUser.uid
+        userId: currentUser.uid,
+        //ニックネーム
+        authorDisplayName: currentUser.displayName
     };
 
     postsRef.push(postData)
