@@ -24,10 +24,13 @@ let currentEditId = null;
 let currentUser = null;
 
 //背景色変更機能を追加
-function color(){
-    const button = $('#colorButton');
-    
-}
+$(function() {
+    // ボタンがクリックされた時のイベント
+    $("#colorButton").click(function() {
+        // body要素の背景色を変更
+        $("body").css("background-color", "lightgray");
+    });
+});
 
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
