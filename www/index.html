@@ -23,6 +23,12 @@ let currentEditId = null;
 // ログイン中のユーザ
 let currentUser = null;
 
+//背景色変更機能を追加
+function color(){
+    const button = $('#colorButton');
+    
+}
+
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
     const messageArea = $('#messageArea');
@@ -520,6 +526,7 @@ window.addEventListener('unload', () => {
 <body>
     <div class="container">
         <h1>掲示板アプリ</h1>
+        <button id="colorButton" class="btn-primary">カラー変更</button>
 
         <!-- メッセージ表示エリア -->
         <div id="messageArea"></div>
